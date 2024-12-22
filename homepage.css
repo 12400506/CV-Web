@@ -1,0 +1,525 @@
+body {
+    margin: 0;
+    background: linear-gradient(to bottom right, #fdfcf7, #e6b89c, #6c4f3d);
+    color: #1a1a1a;
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+}
+
+.fade-in {
+    opacity: 0;
+    font-weight: bold;
+    font-size: 17px;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    background: url('https://images.akzonobel.com/akzonobel-cetabever/netherlands/nl/tips-en-advies/de-houthandleiding-weet-met-welk-hout-je-werkt/woodspotters_guide_2.jpg?impolicy=.auto&imwidth=600') no-repeat center center/cover;
+    height: 400px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 20px black;
+    text-align: center;
+    border-color: black;
+    border-width: 3px;
+    font-family: Arial, sans-serif;
+}
+
+
+.header h1 {
+    font-size: 40px;
+    margin: 0;
+    text-decoration: underline;
+}
+
+.header-description {
+    font-size: 1rem;
+    margin-top: 10px;
+    line-height: 1.5;
+    color: white;
+    max-width: 600px;
+    text-align: left;
+}
+
+.header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.about, .skills, .Hobby, .contact {
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.about h2, .skills h2, .Hobby h2, .contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid black;
+    display: inline-block;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.Hobby-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.Hobby-Box {
+    background: url('https://images.akzonobel.com/akzonobel-cetabever/netherlands/nl/tips-en-advies/de-houthandleiding-weet-met-welk-hout-je-werkt/woodspotters_guide_2.jpg?impolicy=.auto&imwidth=600') no-repeat center center/cover;
+    color: white;
+    padding: 20px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 10px;
+    flex: 1 1 calc(50% - 40px);
+    text-align: center;
+    box-shadow: 0 4px 10px black;
+}
+
+.Hobby-Box h3 {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 0;
+}
+
+
+
+@media (max-width: 780px) {
+    .Hobby-Box {
+        flex-direction: column;
+    }
+
+    .Hobby-Box {
+        flex: 1 1 100%;
+    }
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    animation: fadeIn 2s ease-in;
+}
+
+
+.profile-picture {
+    flex-shrink: 0;
+    margin: 15px;
+    width: 120px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 10px black;
+}
+
+.profile-picture:hover {
+    box-shadow: 0 8px 20px black;
+    transform: translateY(-8px);
+}
+
+.profile-picture:active {
+    box-shadow: none;
+    border: 3px solid black;
+    transform: scale(0.98);
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.header-text {
+    text-align: left;
+}
+
+/* Fade-in animatie */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.skills li img {
+    width: 48px;
+    height: 40px;
+    margin-right: 10px;
+    animation: bounce 2s infinite;
+}
+
+.soft-skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+    box-shadow: black 1px 1px 5px;
+}
+
+.soft-skills-table th, .soft-skills-table td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.soft-skills-table thead th {
+    background-color: black;
+    color: white;
+}
+
+.soft-skills-table tbody tr:nth-child(odd) {
+    background-color: saddlebrown;
+    color: white;
+}
+
+.soft-skills-table tbody tr:nth-child(even) {
+    background-color: sandybrown;
+    color: white;
+}
+
+@media (max-width: 480px) {
+    .soft-skills-table {
+        display: none;
+    }
+    .mobile-table-view {
+        display: block;
+    }
+}
+
+@media (min-width: 481px) {
+    .soft-skills-table {
+        display: table;
+    }
+    .mobile-table-view {
+        display: none;
+    }
+}
+
+.work-experience {
+    list-style-type: disc;
+    margin: 20px;
+    padding-left: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 16px
+}
+
+.work-experience li {
+    margin-bottom: 20px;
+}
+
+.work-experience strong {
+    font-weight: bold;
+}
+
+/* Bounce animatie */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* knop */
+#contactButton {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: saddlebrown;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+#contactButton:hover {
+    background-color: black;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: url('https://images.akzonobel.com/akzonobel-cetabever/netherlands/nl/tips-en-advies/de-houthandleiding-weet-met-welk-hout-je-werkt/woodspotters_guide_2.jpg?impolicy=.auto&imwidth=600') no-repeat center center/cover;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    margin-bottom: 16px;
+}
+
+.close-button {
+    color: greenyellow;
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: red;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline-item {
+    position: relative;
+    margin: 10px 0;
+    width: 45%;
+    padding: 10px;
+    background: #e6b89c;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.timeline-item.left {
+    align-self: flex-start;
+}
+
+.timeline-item.right {
+    align-self: flex-end;
+}
+
+.timeline-item.center {
+    align-self: center;
+    background: #6c4f3d;
+    color: white;
+    font-weight: bold;
+}
+
+.timeline-item p {
+    margin: 0;
+    text-align: center;
+}
+
+.arrow {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 10px;
+    background: #6c4f3d;
+    z-index: 1;
+    transform: translateX(-50%);
+    animation: zigzag 10s infinite ease-in-out; /* Voegt een zigzaganimatie toe */
+}
+
+.arrow:after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-style: solid;
+    border-width: 40px 20px 0 20px;
+    border-color: #6c4f3d transparent transparent transparent;
+}
+
+@keyframes zigzag {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+    10% {
+        transform: translateX(-30%) translateY(5px);
+    }
+    20% {
+        transform: translateX(-70%) translateY(15px);
+    }
+    30% {
+        transform: translateX(-30%) translateY(30px);
+    }
+    40% {
+        transform: translateX(-70%) translateY(50px);
+    }
+    50% {
+        transform: translateX(-50%) translateY(80px);
+    }
+    60% {
+        transform: translateX(-70%) translateY(80px);
+    }
+    70% {
+        transform: translateX(-30%) translateY(50px);
+    }
+    80% {
+        transform: translateX(-70%) translateY(30px);
+    }
+    90% {
+        transform: translateX(-30%) translateY(15px);
+    }
+    100% {
+        transform: translateX(-50%) translateY(0px);
+    }
+}
+
+.language-skills {
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    align-content: center;
+    color: white;
+
+}
+
+.language-skills h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid black;
+    display: inline-block;
+}
+
+.language-skills ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.language-skills li {
+    margin: 10px 0;
+}
+
+.footer {
+    background: url('https://images.akzonobel.com/akzonobel-cetabever/netherlands/nl/tips-en-advies/de-houthandleiding-weet-met-welk-hout-je-werkt/woodspotters_guide_2.jpg?impolicy=.auto&imwidth=600') no-repeat center center/cover;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.footer-left {
+    text-align: left;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.footer-right {
+    text-align: right;
+    margin: 10px;
+    font-size: 20px;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.back-to-top {
+    background-color: lawngreen;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: black;
+    color: white;
+}
+
+
+.language {
+    margin-bottom: 15px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progress-bar {
+    width: 50%; /* Breidt de balk uit naar de volledige breedte van de container */
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+    justify-content: center;
+
+}
+
+.fill {
+    height: 100%;
+    background: linear-gradient(to right, green, greenyellow);
+    border-radius: 5px;
+}
+
+
+
+
